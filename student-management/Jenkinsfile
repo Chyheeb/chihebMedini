@@ -2,18 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Checkout from Git') {
             steps {
                 git branch: 'master',
+                    credentialsId: 'github-chiheb',
                     url: 'https://github.com/Chyheeb/chihebMedini.git'
             }
         }
 
         stage('Build with Maven') {
             steps {
-                sh 'mvn -version'
-                sh 'mvn clean install'
+                dir('student-management') {
+                    sh 'mvn -version'
+                    sh 'mvn clean install -DskipTests'
+                }
             }
         }
     }
 }
+

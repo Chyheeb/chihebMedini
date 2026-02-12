@@ -5,7 +5,6 @@ pipeline {
         stage('Checkout from Git') {
             steps {
                 git branch: 'master',
-                    credentialsId: 'github-chiheb',
                     url: 'https://github.com/Chyheeb/timesheet-devops.git'
             }
         }

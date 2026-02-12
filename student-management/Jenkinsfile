@@ -11,8 +11,10 @@ pipeline {
 
         stage('Build with Maven') {
             steps {
+                dir('student-management') {
                    sh 'mvn -version'
                    sh 'mvn clean install -DskipTests'
+                }
             }
         }
     }

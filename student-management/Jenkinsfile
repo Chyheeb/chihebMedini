@@ -11,10 +11,11 @@ pipeline {
 
         stage('Build with Maven') {
             steps {
-                 dir('student-management') {
-                    sh 'mvn -version'
-                    sh 'mvn clean test'
-                 }
+                dir('student-management') {
+                   sh 'java -version'
+                   sh 'mvn -version'
+                   sh 'mvn clean test'
+               }
             }
         }
     }

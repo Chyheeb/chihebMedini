@@ -6,7 +6,7 @@ pipeline {
             steps {
                 git branch: 'master',
                     credentialsId: 'github-chiheb',
-                    url: 'https://github.com/Chyheeb/chihebMedini.git'
+                    url: 'https://github.com/Chyheeb/timesheet-devops.git'
             }
         }
 

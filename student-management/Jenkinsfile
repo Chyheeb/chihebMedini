@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout from Git') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/Chyheeb/timesheet-devops.git'
+                    url: 'https://github.com/Chyheeb/chihebMedini.git'
             }
         }
 

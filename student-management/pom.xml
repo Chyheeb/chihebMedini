@@ -18,7 +18,6 @@
     <description>student-management</description>
 
     <properties>
-        <!-- Version de Java utilisée par le projet -->
         <java.version>17</java.version>
     </properties>
 
@@ -29,13 +28,13 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-        <!-- Spring Web (REST) -->
+        <!-- Spring Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Driver MySQL -->
+        <!-- MySQL driver -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
@@ -67,13 +66,12 @@
 
     <build>
         <plugins>
-            <!-- CONFIG COMPILATION JAVA (corrige l'erreur "release 17 not supported") -->
+            <!-- Configuration de la compilation Java -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <!-- On compile en Java 17 sans utiliser l'option --release -->
                     <source>17</source>
                     <target>17</target>
                 </configuration>
